@@ -18,7 +18,7 @@
         {
             "name": "dove",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -60,7 +60,7 @@
         {
             "name": "cricket",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -102,7 +102,7 @@
         {
             "name": "hedgehog",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -123,7 +123,7 @@
         {
             "name": "worm",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -137,7 +137,7 @@
         {
             "name": "spider",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -151,7 +151,7 @@
         {
             "name": "badger",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -193,7 +193,7 @@
         {
             "name": "ox",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -207,7 +207,7 @@
         {
             "name": "sheep",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -242,7 +242,7 @@
         {
             "name": "turtle",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -263,7 +263,7 @@
         {
             "name": "deer",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -284,7 +284,7 @@
         {
             "name": "scorpion",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -319,7 +319,7 @@
         {
             "name": "cow",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -333,7 +333,7 @@
         {
             "name": "rooster",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -382,7 +382,7 @@
         {
             "name": "gorilla",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -417,7 +417,7 @@
         {
             "name": "fly",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -431,14 +431,14 @@
         {
             "name": "honey",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
         {
             "name": "sleeping pill",
             "count": 1,
-            "usefull": true
+            "progressive": true
             "value": {
                 "difficulity": 1
         },
@@ -550,16 +550,16 @@
         {
             "name": "progressive_slot",
             "count": 5,
-            "usefull": true
+            "progressive": true
             "value": {
-                "difficulity": 1
+                "difficulity": 15
         },
         {
             "name": "progressive_tier",
             "count": 6,
-            "usefull": true
+            "progressive": true
             "value": {
-                "difficulity": 1
+                "difficulity": 10
         },
 
     ]
