@@ -441,6 +441,7 @@
             "progressive": true
             "value": {
                 "difficulity": 1
+            "early": true
         },
         {
             "name": "meat bone",
