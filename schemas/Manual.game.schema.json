@@ -9,7 +9,7 @@
             "description": "The schema to verify this document against."
         },
         "game": {
-            "description": "Super Auto Pets",
+            "description": "Manual: Super Auto Pets",
             "type": "string"
         },
         "creator": {
