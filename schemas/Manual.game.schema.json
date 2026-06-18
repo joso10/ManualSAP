@@ -9,19 +9,19 @@
             "description": "The schema to verify this document against."
         },
         "game": {
-            "description": "The name of your game, compatible with capital letters.",
+            "description": "Super Auto Pets",
             "type": "string"
         },
         "creator": {
-            "description": "Your Username.",
+            "description": "Joso",
             "type": "string"
         },
         "filler_item_name": {
-            "description": "Name of the filler items that get placed when there's no more real items to place.",
+            "description": "dead turtle",
             "type": "string"
         },
         "starting_items": {
-            "description": "(Optional) Starting inventory",
+            "description": "pet slot, progressive tier",
             "type":"array",
             "items":{
                 "$ref": "#/definitions/Sitems"
