@@ -1,134 +1,382 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/ManualForArchipelago/Manual/main/schemas/Manual.locations.schema.json",
-    "description": "Schema for Manual's locations.json",
-    "type": ["array", "object"],
-    "items": {
-        "$ref": "#/definitions/Location"
-    },
-    "properties": {
-        "$schema": {
-            "type":"string",
-            "description": "The schema to verify this document against."
-        },
-        "data": {
-            "description": "List of locations for this apworld",
-            "type": "array",
-            "items": {"$ref": "#/definitions/Location"}
-        },
-        "_comment": {"$ref": "#/definitions/comment"}
-    },
-    "definitions": {
-        "Location": {
-            "type": "object",
-            "properties": {
-                "name": {
-                    "description": "The unique name of the location.",
-                    "type": "string"
-                },
-                "category": {
-                    "description": "(Optional) A list of categories to be applied to this location.",
-                    "type": ["string", "array"],
-                    "items": {
-                        "type": "string"
-                    },
-                    "uniqueItems": true
-                },
-                "requires": {
-                    "description": "(Optional) A boolean logic string that describes the required items, counts, etc. needed to reach this location.",
-                    "type": [ "string", "array" ],
-                    "items": {
-                        "$ref": "#/definitions/Require"
-                    },
-                    "uniqueItems": true
-                },
-                "region": {
-                    "description": "(Optional) The name of the region this location is part of.",
-                    "type": "string"
-                },
-                "place_item": {
-                    "description": "(Optional) Places an item that matches one of the item names listed in this setting at this location. Does not check logical access to the location.",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "minItems": 0,
-                    "uniqueItems": true
-                },
-                "dont_place_item": {
-                    "description": "(Optional) Configures what item names should not end up at this location during normal generation. Does not check logical access to the location.",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "minItems": 0,
-                    "uniqueItems": true
-                },
-                "place_item_category": {
-                    "description": "(Optional) Places an item that matches at least one of the categories listed in this setting at this location. Does not check logical access to the location.",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "minItems": 0,
-                    "uniqueItems": true
-                },
-                "dont_place_item_category": {
-                    "description": "(Optional) Configures what item categories should not end up at this location during normal generation. Does not check logical access to the location.",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "minItems": 0,
-                    "uniqueItems": true
-                },
-                "victory": {
-                    "description": "(Optional) Is this location one of the possible goals of this Manual APWorld?",
-                    "type": "boolean",
-                    "default": false
-                },
-                "prehint": {
-                    "description": "(Optional) Should this location be hinted at the start?",
-                    "type": "boolean",
-                    "default": false
-                },
-                "hint_entrance": {
-                    "description": "(Optional) Adds additional text to this location's hints to convey useful information. Typically used for entrance randomization.",
-                    "type": "string"
-                },
-                "id": {
-                    "description": "(Optional) Skips the item ID forward to the given value.\nThis can be used to provide buffer space for future items.",
-                    "type": "integer"
-                },
-                "sort-key": {
-                    "description": "(Optional) A string to sort the locations by. If not provided, locations will always be sorted by name.",
-                    "type": "string"
-                },
-                "_comment": {"$ref": "#/definitions/comment"}
-            },
-            "required": ["name"]
-        },
-        "Require": {
-            "type": ["string", "array", "object"],
-            "items": {"type": ["string","array","object"]},
-            "properties": {
-                "or": {
-                    "description": "alternate to previous property",
-                    "type": "array",
-                    "items": {
-                        "type":"string",
-                        "description": "Alternate item"
-                    }
-                }
-            }
-        },
-        "comment": {
-            "description": "(Optional) Does nothing, Its mainly here for Dev notes for future devs to understand your logic",
-            "type": ["string", "array"],
-            "items": {
-                "description": "A line of comment",
-                "type":"string"
-            }
-        }
-    }
-}
+[
+  {
+    "name": "See Ant",
+    "category": ["Pets", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Beaver",
+    "category": ["Pets", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Cricket",
+    "category": ["Pets", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Duck",
+    "category": ["Pets", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Fish",
+    "category": ["Pets", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Mosquito",
+    "category": ["Pets", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Otter",
+    "category": ["Pets", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Pig",
+    "category": ["Pets", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Apple",
+    "category": ["Food", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Honey",
+    "category": ["Food", "Tier 1"],
+    "requires": ""
+  },
+  {
+    "name": "See Crab",
+    "category": ["Pets", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Dodo",
+    "category": ["Pets", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Elephant",
+    "category": ["Pets", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Flamingo",
+    "category": ["Pets", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Hedgehog",
+    "category": ["Pets", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Rat",
+    "category": ["Pets", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Shrimp",
+    "category": ["Pets", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Spider",
+    "category": ["Pets", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Cupcake",
+    "category": ["Food", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Meat Bone",
+    "category": ["Food", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Sleeping Pill",
+    "category": ["Food", "Tier 2"],
+    "requires": "|Progressive Shop Tier|"
+  },
+  {
+    "name": "See Badger",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Blowfish",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Camel",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Dog",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Giraffe",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Ox",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Rabbit",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Sheep",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Snail",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Turtle",
+    "category": ["Pets", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Garlic",
+    "category": ["Food", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Salad Bowl",
+    "category": ["Food", "Tier 3"],
+    "requires": "|Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Bison",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Deer",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Dolphin",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Hippo",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Penguin",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Rooster",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Skunk",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Squirrel",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Whale",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Worm",
+    "category": ["Pets", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Canned Food",
+    "category": ["Food", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Pear",
+    "category": ["Food", "Tier 4"],
+    "requires": "|Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Cow",
+    "category": ["Pets", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Crocodile",
+    "category": ["Pets", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Rhino",
+    "category": ["Pets", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Scorpion",
+    "category": ["Pets", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Seal",
+    "category": ["Pets", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Shark",
+    "category": ["Pets", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Turkey",
+    "category": ["Pets", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Chili",
+    "category": ["Food", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Chocolate",
+    "category": ["Food", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Sushi",
+    "category": ["Food", "Tier 5"],
+    "requires": "|Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Cat",
+    "category": ["Pets", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Fly",
+    "category": ["Pets", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Gorilla",
+    "category": ["Pets", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Leopard",
+    "category": ["Pets", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Mammoth",
+    "category": ["Pets", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Snake",
+    "category": ["Pets", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Tiger",
+    "category": ["Pets", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Melon",
+    "category": ["Food", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Mushroom",
+    "category": ["Food", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Pizza",
+    "category": ["Food", "Tier 6"],
+    "requires": "|Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Bee",
+    "category": ["Tokens"],
+    "requires": "|Honey| and |Sleeping Pill| and |Progressive Shop Tier|"
+  },
+  {
+    "name": "See Zombie Cricket",
+    "category": ["Tokens"],
+    "requires": "|Cricket| and |Sleeping Pill| and |Progressive Shop Tier|"
+  },
+  {
+    "name": "See Spider Spawn",
+    "category": ["Tokens"],
+    "requires": "|Spider| and |Sleeping Pill| and |Progressive Shop Tier|"
+  },
+  {
+    "name": "See Ram",
+    "category": ["Tokens"],
+    "requires": "|Sheep| and |Sleeping Pill| and |Progressive Shop Tier|:2"
+  },
+  {
+    "name": "See Bus",
+    "category": ["Tokens"],
+    "requires": "|Deer| and |Sleeping Pill| and |Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Chick",
+    "category": ["Tokens"],
+    "requires": "|Rooster| and |Sleeping Pill| and |Progressive Shop Tier|:3"
+  },
+  {
+    "name": "See Milk",
+    "category": ["Tokens"],
+    "requires": "|Cow| and |Progressive Shop Tier|:4"
+  },
+  {
+    "name": "See Zombie Fly",
+    "category": ["Tokens"],
+    "requires": "|Fly| and |Sleeping Pill| and |Progressive Shop Tier|:5"
+  },
+  {
+    "name": "See Melon Armor",
+    "category": ["Abilities"],
+    "requires": "|Progressive Shop Tier|:5 or (|Turtle| and |Sleeping Pill| and |Progressive Shop Tier|:2) or (|Ox| and |Sleeping Pill| and |Progressive Shop Tier|:2)"
+  },
+  {
+    "name": "See Coconut Armor",
+    "category": ["Abilities"],
+    "requires": "|Gorilla| and |Hedgehog| and |Sleeping Pill| and |Progressive Shop Tier|:5"
+  },
+  {
+    "name": "10 Trophies Victory",
+    "category": ["Goals"],
+    "requires": "|Progressive Shop Tier|:5"
+  }
+]
